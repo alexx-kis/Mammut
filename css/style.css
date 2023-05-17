@@ -108,7 +108,7 @@ html {
 
 .button::after {
   content: "";
-  background: url("/img/1.header/arrow.svg") no-repeat;
+  background: url("../img/1.header/arrow.svg") no-repeat;
   width: 45px;
   height: 11px;
   position: absolute;
@@ -919,7 +919,7 @@ html {
 .footer__bottom-button::before {
   content: "";
   display: block;
-  background: url("/img/9.footer/location.svg");
+  background: url("../img/9.footer/location.svg");
   width: 14px;
   height: 16px;
   position: absolute;
@@ -1076,7 +1076,7 @@ html {
   }
   .bestsellers__image {
     height: 100%;
-    background: url("/img/6.bestsellers/img.png") no-repeat center -180px/cover;
+    background: url("../img/6.bestsellers/img.png") no-repeat center -180px/cover;
     position: relative;
   }
   .bestsellers__inner {
@@ -1286,7 +1286,7 @@ html {
   }
   /*------------------------------ header ------------------------------*/
   .header {
-    background: url("/img/1.header/bg-left.jpg") no-repeat center/cover;
+    background: url("../img/1.header/bg-left.jpg") no-repeat center/cover;
   }
   .header__content {
     display: flex;
