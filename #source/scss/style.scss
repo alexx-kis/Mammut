@@ -1,5 +1,6 @@
-@import "reset_styles.scss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "reset";
+@import "fonts";
+
 
 html {
 	scroll-behavior: smooth;
@@ -14,12 +15,6 @@ html {
 	margin: 0 auto;
 }
 
-.title {
-	font-size: 64px;
-	line-height: 64px;
-	letter-spacing: 2.25px;
-	color: #fff;
-}
 
 .button {
 	display: block;
@@ -39,7 +34,7 @@ html {
 
 .button::after {
 	content: '';
-	background: url('/img/1.header/arrow.svg') no-repeat;
+	background: url('../img/1.header/arrow.svg') no-repeat;
 	width: 45px;
 	height: 11px;
 	position: absolute;
@@ -54,8 +49,32 @@ html {
 .container {
 	padding: 0 60px;
 	width: 100%;
-
 }
+
+.main-heading {
+	font-size: 64px;
+	line-height: 64px;
+	letter-spacing: 2.25px;
+	color: #fff;
+}
+
+.heading {
+	font-size: 32px;
+	line-height: 38px;
+	letter-spacing: -1px;
+	color: #191919;
+	max-width: 348px;
+	position: relative;
+	margin-left: 32px;
+
+	span {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		background: #E00B25;
+	}
+}
+
 
 /*==================================== header ====================================*/
 
@@ -77,7 +96,6 @@ html {
 	}
 
 	a {
-
 		transition: all .3s;
 	}
 
@@ -157,6 +175,7 @@ html {
 	&__search {
 		position: relative;
 	}
+
 	&__search-popup {
 		border-radius: 20px;
 		padding: 20px;
@@ -169,6 +188,7 @@ html {
 		opacity: 0;
 		transition: all .3s;
 	}
+
 	&__search-popup--visible {
 		visibility: visible;
 		opacity: 1;
@@ -182,8 +202,10 @@ html {
 		background: #000;
 
 	}
+
 	&__search-input {
 		margin-right: 10px;
+
 		input {
 			width: 200px;
 		}
@@ -192,6 +214,7 @@ html {
 	&__search-button {
 		background: #fff;
 		transition: all .3s;
+
 		img {
 			width: 20px;
 			height: 20px;
@@ -204,12 +227,12 @@ html {
 
 
 
-	&__title {
+	&__heading {
 		margin-bottom: 41px;
 		margin-left: -4px;
 	}
 
-	&__subtitle {
+	&__text {
 		max-width: 330px;
 		font-size: 14px;
 		line-height: 19px;
@@ -232,7 +255,7 @@ html {
 		justify-content: space-between;
 	}
 
-	&__title {
+	&__heading {
 		font-size: 32px;
 		line-height: 38px;
 		letter-spacing: -1px;
@@ -241,12 +264,12 @@ html {
 		position: relative;
 		margin-left: 32px;
 
-		span {
-			display: inline-block;
-			width: 6px;
-			height: 6px;
-			background: #E00B25;
-		}
+		// span {
+		// 	display: inline-block;
+		// 	width: 6px;
+		// 	height: 6px;
+		// 	background: #E00B25;
+		// }
 	}
 
 	&__items {
@@ -296,10 +319,6 @@ html {
 	background: url('../img/3.eiger/bg.jpg') no-repeat center / cover;
 	color: #fff;
 
-	// &__container {
-	// 	padding-top: 508px;
-	// }
-
 
 	&__inner {
 		display: flex;
@@ -309,12 +328,12 @@ html {
 		padding-bottom: 64px;
 	}
 
-	&__title {
+	&__heading {
 		margin-left: 28px;
 		margin-bottom: 41px;
 	}
 
-	&__subtitle {
+	&__text {
 		margin-left: 32px;
 		max-width: 367px;
 		margin-bottom: 28px;
@@ -409,28 +428,6 @@ html {
 		position: relative;
 	}
 
-	&__title {
-		min-width: 228px;
-		max-width: 228px;
-		font-size: 32px;
-		line-height: 38px;
-		letter-spacing: -0.6px;
-		color: #191919;
-		margin-left: 32px;
-		position: relative;
-		margin-right: 15px;
-	}
-
-	&__title::after {
-		display: block;
-		content: '';
-		width: 6px;
-		height: 6px;
-		background: #E00B25;
-		position: absolute;
-		bottom: 8px;
-		right: 60px;
-	}
 
 	&__slider-inner {
 		position: relative;
@@ -537,12 +534,12 @@ html {
 	}
 
 
-	&__title {
+	&__heading {
 		margin-left: -4px;
 		margin-bottom: 41px;
 	}
 
-	&__subtitle {
+	&__text {
 		max-width: 335px;
 		font-size: 14px;
 		line-height: 19px;
@@ -584,7 +581,6 @@ html {
 
 /*==================================== shop ====================================*/
 
-
 .shop {
 	padding-top: 50px;
 	padding-bottom: 100px;
@@ -598,26 +594,13 @@ html {
 		margin-bottom: 20px;
 	}
 
-	&__title {
+	&__heading {
 		font-size: 32px;
 		line-height: 38px;
 		letter-spacing: -0.8px;
 		color: #191919;
 		margin-left: 32px;
-		position: relative;
-		// margin-bottom: 20px;
-		width: 150px;
-	}
-
-	&__title::after {
-		display: block;
-		content: '';
-		width: 6px;
-		height: 6px;
-		background: #E00B25;
-		position: absolute;
-		bottom: 8px;
-		right: -13px;
+		max-width: 170px;
 	}
 
 	&__link {
@@ -710,7 +693,7 @@ html {
 		padding: 0;
 	}
 
-	&__title {
+	&__heading {
 		font-size: 20px;
 		line-height: 26px;
 		letter-spacing: 1.44px;
@@ -808,7 +791,7 @@ html {
 .subscribe {
 	padding: 59px 20px 144px;
 
-	&__title {
+	&__heading {
 		font-size: 32px;
 		line-height: 38px;
 		text-align: center;
@@ -1034,7 +1017,7 @@ html {
 	&__bottom-button::before {
 		content: '';
 		display: block;
-		background: url('/img/9.footer/location.svg');
+		background: url('../img/9.footer/location.svg');
 		width: 14px;
 		height: 16px;
 		position: absolute;
@@ -1090,894 +1073,867 @@ html {
 	}
 }
 
+@import "media";
 
-/*==================================== media ====================================*/
+// /*==================================== MEDIA ====================================*/
+// /*==================================== MEDIA ====================================*/
 
-/*==================================== 1500 ====================================*/
+// /*==================================== 1500 ====================================*/
 
-@media (max-width:1500px) {
-	/*------------------------------ adventure ------------------------------*/
+// @media (max-width:1500px) {
+// 	/*------------------------------ adventure ------------------------------*/
 
-	.adventure .container {
-		padding: 0;
-	}
+// 	.adventure .container {
+// 		padding: 0;
+// 	}
 
-	.adventure__slider-arrows {
-		top: center;
+// 	.adventure__slider-arrows {
+// 		top: center;
 
-	}
-}
+// 	}
+// }
 
 
-/*==================================== 1350 ====================================*/
 
+// /*==================================== 1200 ====================================*/
 
-@media (max-width: 1350px) {
-	/*------------------------------ items ------------------------------*/
 
-	.items {}
-}
+// @media (max-width: 1200px) {
+// 	.container {
+// 		padding: 0;
+// 	}
 
+// 	/*------------------------------ header ------------------------------*/
 
+// 	.header {
+// 		&__content {
+// 			padding-bottom: 38px;
+// 		}
+// 	}
+// }
 
-/*==================================== 1200 ====================================*/
+// @media (max-width: 850px) {
+// 	/*------------------------------ header ------------------------------*/
 
+// 	.header {
+// 		background-position: 0 0;
+// 	}
+// }
 
-@media (max-width: 1200px) {
-	.container {
-		padding: 0;
-	}
 
-	/*------------------------------ header ------------------------------*/
 
-	.header {
-		&__content {
-			padding-bottom: 38px;
-		}
-	}
-}
 
-@media (max-width: 850px) {
-	/*------------------------------ header ------------------------------*/
 
-	.header {
-		background-position: 0 0;
-	}
-}
+// /*==================================== 1170 ====================================*/
 
+// @media (max-width: 1170px) {
 
+// 	/*------------------------------ adventure ------------------------------*/
+// 	.adventure {
+// 		&__slider {
+// 			max-width: 800px;
+// 		}
 
+// 		&__slider-prev {
+// 			right: 172px;
+// 		}
 
+// 		&__slider-next {
+// 			left: 56px;
+// 		}
+// 	}
 
-/*==================================== 1170 ====================================*/
+// }
 
-@media (max-width: 1170px) {
+// /*==================================== 1148 ====================================*/
 
-	/*------------------------------ adventure ------------------------------*/
-	.adventure {
-		&__slider {
-			max-width: 800px;
-		}
+// @media (max-width: 1148px) {
+// 	.blog {
+// 		&__photos-grid::after {
+// 			content: "";
+// 			display: block;
+// 			position: absolute;
+// 			width: 33%;
+// 			height: 2px;
+// 			background: #CDCDCD;
+// 			bottom: 5%;
+// 			right: -100px;
+// 		}
+// 	}
+// }
 
-		&__slider-prev {
-			right: 172px;
-		}
+// /*==================================== 980 ====================================*/
 
-		&__slider-next {
-			left: 56px;
-		}
-	}
+// @media (max-width: 980px) {
+// 	/*------------------------------ eiger ------------------------------*/
 
-}
+// 	.eiger {
+// 		background-position: 0 0;
 
-/*==================================== 1148 ====================================*/
+// 	}
 
-@media (max-width: 1148px) {
-	.blog {
-		&__photos-grid::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 33%;
-			height: 2px;
-			background: #CDCDCD;
-			bottom: 5%;
-			right: -100px;
-		}
-	}
-}
+// 	/*------------------------------ adventure ------------------------------*/
 
-/*==================================== 980 ====================================*/
-
-@media (max-width: 980px) {
-	/*------------------------------ eiger ------------------------------*/
-
-	.eiger {
-		background-position: 0 0;
-
-	}
-
-	/*------------------------------ adventure ------------------------------*/
-
-	.adventure {
-		&__slider-arrows {
-			display: none;
-		}
-
-		// &__slide-inner{
-		// 	width: 300px;
-		// }
-
-		&__slider {
-			max-width: 600px;
-		}
-
-		&__slider-dots .slick-dots {
-			display: flex;
-			justify-content: center;
-			// transform: translate(10%);
-			align-items: center;
-			padding-top: 20px;
-		}
-
-		&__slider-dots li {
-			margin-right: 12px;
-		}
-
-		&__slider-dots li:last-child {
-			margin-right: 0;
-		}
-
-		&__slider-dots button {
-			font-size: 0;
-			background-color: transparent;
-			width: 10px;
-			height: 30px;
-			display: flex;
-			align-items: center;
-		}
-
-		&__slider-dots button::before {
-			content: "";
-			height: 10px;
-			width: 100%;
-			background-color: #B3B7BC;
-			border-radius: 50%;
-		}
-
-		&__slider-dots .slick-active button::before {
-			background-color: #424551;
-			transition: all .3s;
-		}
-	}
-
-	/*------------------------------ bestsellers ------------------------------*/
-
-	.bestsellers {
-		// height: auto;
-		display: flex;
-		flex-direction: column;
-		background: #23293C;
-		justify-content: space-between;
-
-		&__image {
-			height: 100%;
-			background: url('/img/6.bestsellers/img.png') no-repeat center -180px/ cover;
-			position: relative;
-		}
-
-		&__inner {
-			padding: 0px;
-		}
-
-		&__info {
-			height: 100%;
-			padding: 20px 0;
-			margin: 0 auto;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-evenly;
-		}
-
-		&__title {
-			text-align: center;
-			position: relative;
-		}
-
-		&__subtitle {
-			margin-bottom: 40px;
-			text-align: center;
-		}
-
-		&__button {
-			width: 100%;
-			margin: 0 auto 30px;
-		}
-
-		&__info::before {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 176px;
-			height: 2px;
-			background: #CDCDCD;
-			bottom: 300px;
-			right: 0;
-		}
-	}
-
-	/*------------------------------ footer ------------------------------*/
-	/*------------------------------ middle ------------------------------*/
-
-	.footer {
-		&__middle-items {
-			display: grid;
-			grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-			gap: 16px;
-		}
-	}
-
-}
-
-/*==================================== 870 ====================================*/
-
-@media (max-width: 870px) {
-
-	.items {
-		&__inner {
-			padding: 20px;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		&__title {
-			margin-left: 0;
-			margin-bottom: 30px;
-		}
-
-		&__items {
-			margin: 0 auto;
-		}
-	}
-
-	.adventure {
-		.container {
-			padding: 20px;
-		}
-
-		&__title {
-			margin: 0 0 30px;
-			max-width: none;
-		}
-
-		&__title::after {
-			bottom: 6px;
-			right: -14px;
-		}
-
-		&__inner {
-			flex-direction: column;
-			align-items: center;
-		}
-
-		&__slider {
-			max-width: 770px;
-		}
-
-		&__slide-inner {
-			padding: 0 0px;
-		}
-	}
-
-	.footer {
-		&__bottom {
-			padding-top: 20px;
-		}
-
-		&__bottom-inner {
-			flex-wrap: wrap-reverse;
-			// border: 1px solid orange;
-			position: relative;
-		}
-
-		&__bottom-links {
-			margin-right: 81px;
-		}
-
-		&__bottom-socials {
-			margin-left: 0;
-			margin-bottom: 40px;
-
-		}
-
-		&__bottom-inner::before {
-			content: "";
-			display: block;
-			width: 100%;
-			height: 1px;
-			background: rgba(204, 204, 204, 0.2);
-			position: absolute;
-			// bottom: 0;
-			top: 40px;
-			left: 0;
-		}
-	}
-}
-
-/*==================================== 800 ====================================*/
-
-@media (max-width: 800px) {
-
-
-	/*------------------------------ men&women ------------------------------*/
-
-	.menandwomen {
-		&__item-text {
-			padding: 0;
-			height: 100%;
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-
-		&__item-title {
-			margin-left: 0;
-		}
-
-		&__item-subtitle {
-			margin-left: 0;
-		}
-	}
-}
-
-/*==================================== 790 ====================================*/
-
-
-@media (max-width: 790px) {
-	.adventure {
-		&__slider {
-			max-width: 600px;
-		}
-	}
-
-	.bestsellers {
-		&__image {
-			background-position: center -112px;
-
-		}
-	}
-
-	/*------------------------------ footer ------------------------------*/
-	/*------------------------------ footer top ------------------------------*/
-	.footer {
-		&__top {
-			padding-bottom: 15px;
-		}
-
-		&__logo {
-			flex: none;
-			width: 180px;
-			margin: 20px 30px 40px 0;
-		}
-
-		&__menu {
-			display: block;
-		}
-
-		&__menu-block {
-			padding: 0;
-		}
-
-		&__menu-title {
-			cursor: pointer;
-			pointer-events: all;
-			margin: 0;
-			margin-top: 20px;
-			position: relative;
-			padding-left: 15px;
-		}
-
-		&__menu-title::before {
-			content: "";
-			display: block;
-			max-width: 100%;
-			height: 1px;
-			background: rgba(204, 204, 204, 0.2);
-			position: relative;
-			bottom: 10px;
-			// right: 14px;
-		}
-
-		&__submenu {
-			padding-top: 20px;
-			display: none;
-			margin-bottom: 30px;
-			padding-left: 15px;
-		}
-	}
-
-}
-
-/*==================================== 720 ====================================*/
-
-
-@media (max-width: 720px) {
-	.footer {
-		&__bottom-links {
-			margin-right: 0;
-		}
-	}
-
-}
-
-
-/*==================================== 668 ====================================*/
-
-
-@media (max-width: 668px) {
-	.footer {
-		&__bottom-inner {
-			flex-direction: column-reverse;
-			flex-wrap: nowrap;
-		}
-
-		&__bottom-links {
-			margin-right: 0;
-			margin-left: 0;
-			margin-bottom: 40px;
-			position: relative;
-		}
-
-		&__bottom-inner::after {
-			content: "";
-			display: block;
-			width: 100%;
-			height: 1px;
-			background: rgba(204, 204, 204, 0.2);
-			position: absolute;
-			top: 100px;
-			left: 0;
-		}
-	}
-}
-
-
-/*==================================== 600 ====================================*/
-
-
-@media (max-width: 600px) {
-	.button::after {
-		display: none;
-	}
-
-	.title {
-		font-size: 50px;
-	}
-
-	/*------------------------------ header ------------------------------*/
-
-	.header {
-		background: url('/img/1.header/bg-left.jpg') no-repeat center / cover;
-
-		&__content {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		&__title {
-			text-align: center;
-			padding: 0 15px;
-			font-size: 50px;
-			margin-left: 0;
-		}
-
-		&__subtitle {
-			padding: 0 15px;
-			margin-left: 0;
-			text-align: center;
-		}
-
-		&__button {
-			margin-left: 0;
-		}
-
-		&__button::after {
-			display: none;
-		}
-	}
-
-	/*------------------------------ eiger ------------------------------*/
-
-	.eiger {
-		&__button {
-			max-width: 230px;
-		}
-	}
-
-	/*------------------------------ men&women ------------------------------*/
-
-	.menandwomen {
-		&__inner {
-			flex-direction: column;
-			padding: 50px 32px;
-		}
-
-		&__item {
-			padding: 20px 0;
-		}
-	}
-
-
-	/*------------------------------ adventure ------------------------------*/
-
-	.adventure {
-		&__slider {
-			max-width: 400px;
-		}
-	}
-
-	/*------------------------------ bestsellers ------------------------------*/
-
-	.bestsellers {
-		&__title {
-			text-align: center;
-		}
-
-		&__image {
-			background-position: center 0;
-		}
-
-		&__subtitle {
-			padding: 0 15px;
-		}
-
-		&__button {
-			text-align: center;
-		}
-	}
-
-	/*------------------------------ blog ------------------------------*/
-
-	.blog {
-		&__photos-grid {
-			grid-template: 1fr 1fr / 1fr 1fr 1fr;
-		}
-
-		&__photos-item--item1 {
-			order: 1;
-		}
-
-		&__photos-item--item2 {
-			order: 2;
-		}
-
-		&__photos-item--item3 {
-			order: 4;
-		}
-
-		&__photos-item--item4 {
-			order: 6;
-		}
-
-		&__photos-item--item5 {
-			order: 5;
-		}
-
-		&__photos-item--item6 {
-			order: 6;
-		}
-
-		&__photos-item--item7 {
-			order: 7;
-		}
-
-		&__photos-item--item8 {
-			order: 8;
-		}
-	}
-
-	/*------------------------------ subscribe ------------------------------*/
-
-	.subscribe {
-		padding-bottom: 50px;
-	}
-}
-
-/*==================================== 650 ====================================*/
-
-@media (max-width: 650px) {
-	.items {
-		&__title {
-			max-width: 348px;
-			text-align: center;
-		}
-
-		&__title::after {
-			top: 83px;
-			right: 26px;
-		}
-	}
-
-	.adventure {
-		&__title {
-			text-align: center;
-		}
-	}
-
-}
-
-/*==================================== 565 ====================================*/
-
-@media (max-width: 565px) {
-	.items {
-		&__items {
-			flex-direction: column;
-		}
-
-		&__item {
-			padding: 20px;
-		}
-	}
-
-	.footer {
-		&__middle-items {
-			display: flex;
-			flex-direction: column;
-		}
-
-		&__middle-image {
-			width: 40px;
-			height: 40px;
-			flex: 0 0 40px;
-		}
-
-		&__top {
-			flex-direction: column;
-		}
-
-		&__logo {
-			margin: 0 auto 40px;
-		}
-
-		&__menu-title {
-			padding-left: 0;
-		}
-
-		&__submenu {
-			padding-left: 0;
-		}
-	}
-}
-
-/*==================================== 500 ====================================*/
-
-@media (max-width: 500px) {
-	.shop {
-		&__info {
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-		}
-
-		&__title {
-			margin: 20px 0;
-		}
-
-		&__slider-arrows {
-			display: none;
-		}
-
-		&__link {
-			margin-right: 0px;
-			margin-left: 5px;
-		}
-
-		&__slider-dots .slick-dots {
-			margin-top: 20px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		&__slider-dots li {
-			margin-right: 12px;
-		}
-
-		&__slider-dots li:last-child {
-			margin-right: 0;
-		}
-
-		&__slider-dots button {
-			font-size: 0;
-			background-color: transparent;
-			width: 10px;
-			height: 30px;
-			display: flex;
-			align-items: center;
-		}
-
-		&__slider-dots button::before {
-			content: "";
-			height: 10px;
-			width: 100%;
-			background-color: #B3B7BC;
-			border-radius: 50%;
-		}
-
-		&__slider-dots .slick-active button::before {
-			background-color: #424551;
-			transition: all .3s;
-		}
-	}
-
-	/*------------------------------ footer ------------------------------*/
-
-
-	.footer {
-		&__bottom-links {
-			flex-direction: column;
-			align-items: start;
-		}
-
-		&__bottom-inner::after {
-			content: "";
-			display: block;
-			width: 100%;
-			height: 1px;
-			background: rgba(204, 204, 204, 0.2);
-			position: absolute;
-			top: 170px;
-			left: 0;
-		}
-	}
-}
-
-/*==================================== 420 ====================================*/
-
-@media (max-width: 420px) {
-	/*------------------------------ eiger ------------------------------*/
-
-
-
-	.eiger {
-		&__title {
-			padding-right: 32px;
-		}
-
-		&__subtitle {
-			padding-right: 32px;
-		}
-	}
-
-	/*------------------------------ adventure ------------------------------*/
-
-	.adventure {
-		&__title {
-			width: 380px;
-		}
-
-		&__title::after {
-			right: 100px;
-		}
-	}
-
-	/*------------------------------ blog ------------------------------*/
-
-	.blog {
-		&__photos-grid {
-			grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-			gap: 8px;
-		}
-
-		&__photos-item--item4 {
-			order: 6;
-		}
-
-		&__photos-item--item6 {
-			order: 5;
-		}
-
-		&__photos-grid::after {
-			width: 72%;
-			bottom: 2%;
-		}
-
-		&__title {
-			margin: 0 auto 28px;
-			width: 110px;
-		}
-	}
-}
-
-
-/*==================================== 400 ====================================*/
-
-@media (max-width: 400px) {
-	/*------------------------------ eiger ------------------------------*/
-
-	.eiger {
-		&__title {
-			text-align: center;
-		}
-
-		&__subtitle {
-			text-align: center;
-		}
-
-		&__button {
-			margin: 0 auto;
-		}
-	}
-
-	/*------------------------------ men&womwn ------------------------------*/
-
-	.menandwomen {
-		&__inner {
-			padding: 30px 15px;
-		}
-	}
-
-	/*------------------------------ bestsellers ------------------------------*/
-
-	.bestsellers {
-		&__image {
-			background-position: right;
-		}
-
-		&__inner {
-			min-width: auto;
-		}
-
-		&__info {
-			max-width: 300px;
-		}
-	}
-}
-
-
-/*==================================== 340 ====================================*/
-
-@media (max-width: 340px) {
-	/*------------------------------ header ------------------------------*/
-
-	.header {
-		&__nav {
-			margin: 0;
-			display: flex;
-			justify-content: space-around;
-		}
-
-		&__button {
-			text-align: center;
-			max-width: 200px;
-		}
-	}
-
-	/*------------------------------ items ------------------------------*/
-
-	.items {
-		&__title {
-			max-width: 282px;
-		}
-
-		&__title::after {
-			top: 123px;
-			right: 54px;
-		}
-	}
-
-	/*------------------------------ bestsellers ------------------------------*/
-
-	.bestsellers {
-		&__title {
-			font-size: 40px;
-		}
-	}
-
-	/*------------------------------ shop ------------------------------*/
-
-
-}
+// 	.adventure {
+// 		&__slider-arrows {
+// 			display: none;
+// 		}
+
+// 		// &__slide-inner{
+// 		// 	width: 300px;
+// 		// }
+
+// 		&__slider {
+// 			max-width: 600px;
+// 		}
+
+// 		&__slider-dots .slick-dots {
+// 			display: flex;
+// 			justify-content: center;
+// 			// transform: translate(10%);
+// 			align-items: center;
+// 			padding-top: 20px;
+// 		}
+
+// 		&__slider-dots li {
+// 			margin-right: 12px;
+// 		}
+
+// 		&__slider-dots li:last-child {
+// 			margin-right: 0;
+// 		}
+
+// 		&__slider-dots button {
+// 			font-size: 0;
+// 			background-color: transparent;
+// 			width: 10px;
+// 			height: 30px;
+// 			display: flex;
+// 			align-items: center;
+// 		}
+
+// 		&__slider-dots button::before {
+// 			content: "";
+// 			height: 10px;
+// 			width: 100%;
+// 			background-color: #B3B7BC;
+// 			border-radius: 50%;
+// 		}
+
+// 		&__slider-dots .slick-active button::before {
+// 			background-color: #424551;
+// 			transition: all .3s;
+// 		}
+// 	}
+
+// 	/*------------------------------ bestsellers ------------------------------*/
+
+// 	.bestsellers {
+// 		// height: auto;
+// 		display: flex;
+// 		flex-direction: column;
+// 		background: #23293C;
+// 		justify-content: space-between;
+
+// 		&__image {
+// 			height: 100%;
+// 			background: url('../img/6.bestsellers/img.png') no-repeat center -180px/ cover;
+// 			position: relative;
+// 		}
+
+// 		&__inner {
+// 			padding: 0px;
+// 		}
+
+// 		&__info {
+// 			height: 100%;
+// 			padding: 20px 0;
+// 			margin: 0 auto;
+// 			display: flex;
+// 			flex-direction: column;
+// 			justify-content: space-evenly;
+// 		}
+
+// 		&__heading {
+// 			text-align: center;
+// 			position: relative;
+// 		}
+
+// 		&__text {
+// 			margin-bottom: 40px;
+// 			text-align: center;
+// 		}
+
+// 		&__button {
+// 			width: 100%;
+// 			margin: 0 auto 30px;
+// 		}
+
+// 		&__info::before {
+// 			content: "";
+// 			display: block;
+// 			position: absolute;
+// 			width: 176px;
+// 			height: 2px;
+// 			background: #CDCDCD;
+// 			bottom: 300px;
+// 			right: 0;
+// 		}
+// 	}
+
+// 	/*------------------------------ footer ------------------------------*/
+// 	/*------------------------------ middle ------------------------------*/
+
+// 	.footer {
+// 		&__middle-items {
+// 			display: grid;
+// 			grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+// 			gap: 16px;
+// 		}
+// 	}
+
+// }
+
+// /*==================================== 870 ====================================*/
+
+// @media (max-width: 870px) {
+
+// 	.items {
+// 		&__inner {
+// 			padding: 20px;
+// 			flex-direction: column;
+// 			align-items: center;
+// 		}
+
+// 		&__heading {
+// 			margin-left: 0;
+// 			margin-bottom: 30px;
+// 		}
+
+// 		&__items {
+// 			margin: 0 auto;
+// 		}
+// 	}
+
+// 	.adventure {
+// 		.container {
+// 			padding: 20px;
+// 		}
+
+// 		&__heading {
+// 			margin: 0 0 30px;
+// 			max-width: none;
+// 		}
+
+// 		&__inner {
+// 			flex-direction: column;
+// 			align-items: center;
+// 		}
+
+// 		&__slider {
+// 			max-width: 770px;
+// 		}
+
+// 		&__slide-inner {
+// 			padding: 0 0px;
+// 		}
+// 	}
+
+// 	.footer {
+// 		&__bottom {
+// 			padding-top: 20px;
+// 		}
+
+// 		&__bottom-inner {
+// 			flex-wrap: wrap-reverse;
+// 			// border: 1px solid orange;
+// 			position: relative;
+// 		}
+
+// 		&__bottom-links {
+// 			margin-right: 81px;
+// 		}
+
+// 		&__bottom-socials {
+// 			margin-left: 0;
+// 			margin-bottom: 40px;
+
+// 		}
+
+// 		&__bottom-inner::before {
+// 			content: "";
+// 			display: block;
+// 			width: 100%;
+// 			height: 1px;
+// 			background: rgba(204, 204, 204, 0.2);
+// 			position: absolute;
+// 			// bottom: 0;
+// 			top: 40px;
+// 			left: 0;
+// 		}
+// 	}
+// }
+
+// /*==================================== 800 ====================================*/
+
+// @media (max-width: 800px) {
+
+
+// 	/*------------------------------ men&women ------------------------------*/
+
+// 	.menandwomen {
+// 		&__item-text {
+// 			padding: 0;
+// 			height: 100%;
+// 			width: 100%;
+// 			display: flex;
+// 			flex-direction: column;
+// 			justify-content: center;
+// 			align-items: center;
+// 		}
+
+// 		&__item-title {
+// 			margin-left: 0;
+// 		}
+
+// 		&__item-subtitle {
+// 			margin-left: 0;
+// 		}
+// 	}
+// }
+
+// /*==================================== 790 ====================================*/
+
+
+// @media (max-width: 790px) {
+// 	.adventure {
+// 		&__slider {
+// 			max-width: 600px;
+// 		}
+// 	}
+
+// 	.bestsellers {
+// 		&__image {
+// 			background-position: center -112px;
+
+// 		}
+// 	}
+
+// 	/*------------------------------ footer ------------------------------*/
+// 	/*------------------------------ footer top ------------------------------*/
+// 	.footer {
+// 		&__top {
+// 			padding-bottom: 15px;
+// 		}
+
+// 		&__logo {
+// 			flex: none;
+// 			width: 180px;
+// 			margin: 20px 30px 40px 0;
+// 		}
+
+// 		&__menu {
+// 			display: block;
+// 		}
+
+// 		&__menu-block {
+// 			padding: 0;
+// 		}
+
+// 		&__menu-title {
+// 			cursor: pointer;
+// 			pointer-events: all;
+// 			margin: 0;
+// 			margin-top: 20px;
+// 			position: relative;
+// 			padding-left: 15px;
+// 		}
+
+// 		&__menu-title::before {
+// 			content: "";
+// 			display: block;
+// 			max-width: 100%;
+// 			height: 1px;
+// 			background: rgba(204, 204, 204, 0.2);
+// 			position: relative;
+// 			bottom: 10px;
+// 			// right: 14px;
+// 		}
+
+// 		&__submenu {
+// 			padding-top: 20px;
+// 			display: none;
+// 			margin-bottom: 30px;
+// 			padding-left: 15px;
+// 		}
+// 	}
+
+// }
+
+// /*==================================== 720 ====================================*/
+
+
+// @media (max-width: 720px) {
+// 	.footer {
+// 		&__bottom-links {
+// 			margin-right: 0;
+// 		}
+// 	}
+
+// }
+
+
+// /*==================================== 668 ====================================*/
+
+
+// @media (max-width: 668px) {
+// 	.footer {
+// 		&__bottom-inner {
+// 			flex-direction: column-reverse;
+// 			flex-wrap: nowrap;
+// 		}
+
+// 		&__bottom-links {
+// 			margin-right: 0;
+// 			margin-left: 0;
+// 			margin-bottom: 40px;
+// 			position: relative;
+// 		}
+
+// 		&__bottom-inner::after {
+// 			content: "";
+// 			display: block;
+// 			width: 100%;
+// 			height: 1px;
+// 			background: rgba(204, 204, 204, 0.2);
+// 			position: absolute;
+// 			top: 100px;
+// 			left: 0;
+// 		}
+// 	}
+// }
+
+
+// /*==================================== 600 ====================================*/
+
+
+// @media (max-width: 600px) {
+// 	.button::after {
+// 		display: none;
+// 	}
+
+// 	.main-heading {
+// 		font-size: 50px;
+// 	}
+
+// 	/*------------------------------ header ------------------------------*/
+
+// 	.header {
+// 		background: url('../img/1.header/bg-left.jpg') no-repeat center / cover;
+
+// 		&__content {
+// 			display: flex;
+// 			flex-direction: column;
+// 			align-items: center;
+// 		}
+
+// 		&__heading {
+// 			text-align: center;
+// 			padding: 0 15px;
+// 			font-size: 50px;
+// 			margin-left: 0;
+// 		}
+
+// 		&__text {
+// 			padding: 0 15px;
+// 			margin-left: 0;
+// 			text-align: center;
+// 		}
+
+// 		&__button {
+// 			margin-left: 0;
+// 		}
+
+// 		&__button::after {
+// 			display: none;
+// 		}
+// 	}
+
+// 	/*------------------------------ eiger ------------------------------*/
+
+// 	.eiger {
+// 		&__button {
+// 			max-width: 230px;
+// 		}
+// 	}
+
+// 	/*------------------------------ men&women ------------------------------*/
+
+// 	.menandwomen {
+// 		&__inner {
+// 			flex-direction: column;
+// 			padding: 50px 32px;
+// 		}
+
+// 		&__item {
+// 			padding: 20px 0;
+// 		}
+// 	}
+
+
+// 	/*------------------------------ adventure ------------------------------*/
+
+// 	.adventure {
+// 		&__slider {
+// 			max-width: 400px;
+// 		}
+// 	}
+
+// 	/*------------------------------ bestsellers ------------------------------*/
+
+// 	.bestsellers {
+// 		&__heading {
+// 			text-align: center;
+// 		}
+
+// 		&__image {
+// 			background-position: center 0;
+// 		}
+
+// 		&__text {
+// 			padding: 0 15px;
+// 		}
+
+// 		&__button {
+// 			text-align: center;
+// 		}
+// 	}
+
+// 	/*------------------------------ blog ------------------------------*/
+
+// 	.blog {
+// 		&__photos-grid {
+// 			grid-template: 1fr 1fr / 1fr 1fr 1fr;
+// 		}
+
+// 		&__photos-item--item1 {
+// 			order: 1;
+// 		}
+
+// 		&__photos-item--item2 {
+// 			order: 2;
+// 		}
+
+// 		&__photos-item--item3 {
+// 			order: 4;
+// 		}
+
+// 		&__photos-item--item4 {
+// 			order: 6;
+// 		}
+
+// 		&__photos-item--item5 {
+// 			order: 5;
+// 		}
+
+// 		&__photos-item--item6 {
+// 			order: 6;
+// 		}
+
+// 		&__photos-item--item7 {
+// 			order: 7;
+// 		}
+
+// 		&__photos-item--item8 {
+// 			order: 8;
+// 		}
+// 	}
+
+// 	/*------------------------------ subscribe ------------------------------*/
+
+// 	.subscribe {
+// 		padding-bottom: 50px;
+// 	}
+// }
+
+// /*==================================== 650 ====================================*/
+
+// @media (max-width: 650px) {
+// 	.items {
+// 		&__heading {
+// 			max-width: 348px;
+// 			text-align: center;
+// 		}
+// 	}
+
+// 	.adventure {
+// 		&__heading {
+// 			text-align: center;
+// 		}
+// 	}
+
+// }
+
+// /*==================================== 565 ====================================*/
+
+// @media (max-width: 565px) {
+// 	.items {
+// 		&__items {
+// 			flex-direction: column;
+// 		}
+
+// 		&__item {
+// 			padding: 20px;
+// 		}
+// 	}
+
+// 	.footer {
+// 		&__middle-items {
+// 			display: flex;
+// 			flex-direction: column;
+// 		}
+
+// 		&__middle-image {
+// 			width: 40px;
+// 			height: 40px;
+// 			flex: 0 0 40px;
+// 		}
+
+// 		&__top {
+// 			flex-direction: column;
+// 		}
+
+// 		&__logo {
+// 			margin: 0 auto 40px;
+// 		}
+
+// 		&__menu-title {
+// 			padding-left: 0;
+// 		}
+
+// 		&__submenu {
+// 			padding-left: 0;
+// 		}
+// 	}
+// }
+
+// /*==================================== 500 ====================================*/
+
+// @media (max-width: 500px) {
+// 	.shop {
+// 		&__info {
+// 			flex-direction: column;
+// 			align-items: center;
+// 			justify-content: center;
+// 		}
+
+// 		&__heading {
+// 			margin: 20px 0;
+// 		}
+
+// 		&__slider-arrows {
+// 			display: none;
+// 		}
+
+// 		&__link {
+// 			margin-right: 0px;
+// 			margin-left: 5px;
+// 		}
+
+// 		&__slider-dots .slick-dots {
+// 			margin-top: 20px;
+// 			display: flex;
+// 			justify-content: center;
+// 			align-items: center;
+// 		}
+
+// 		&__slider-dots li {
+// 			margin-right: 12px;
+// 		}
+
+// 		&__slider-dots li:last-child {
+// 			margin-right: 0;
+// 		}
+
+// 		&__slider-dots button {
+// 			font-size: 0;
+// 			background-color: transparent;
+// 			width: 10px;
+// 			height: 30px;
+// 			display: flex;
+// 			align-items: center;
+// 		}
+
+// 		&__slider-dots button::before {
+// 			content: "";
+// 			height: 10px;
+// 			width: 100%;
+// 			background-color: #B3B7BC;
+// 			border-radius: 50%;
+// 		}
+
+// 		&__slider-dots .slick-active button::before {
+// 			background-color: #424551;
+// 			transition: all .3s;
+// 		}
+// 	}
+
+// 	/*------------------------------ footer ------------------------------*/
+
+
+// 	.footer {
+// 		&__bottom-links {
+// 			flex-direction: column;
+// 			align-items: start;
+// 		}
+
+// 		&__bottom-inner::after {
+// 			content: "";
+// 			display: block;
+// 			width: 100%;
+// 			height: 1px;
+// 			background: rgba(204, 204, 204, 0.2);
+// 			position: absolute;
+// 			top: 170px;
+// 			left: 0;
+// 		}
+// 	}
+// }
+
+// /*==================================== 420 ====================================*/
+
+// @media (max-width: 420px) {
+// 	/*------------------------------ eiger ------------------------------*/
+
+
+
+// 	.eiger {
+// 		&__heading {
+// 			padding-right: 32px;
+// 		}
+
+// 		&__text {
+// 			padding-right: 32px;
+// 		}
+// 	}
+
+// 	/*------------------------------ adventure ------------------------------*/
+
+// 	.adventure {
+// 		&__title {
+// 			width: 360px;
+// 		}
+// 	}
+
+// 	/*------------------------------ blog ------------------------------*/
+
+// 	.blog {
+// 		&__photos-grid {
+// 			grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+// 			gap: 8px;
+// 		}
+
+// 		&__photos-item--item4 {
+// 			order: 6;
+// 		}
+
+// 		&__photos-item--item6 {
+// 			order: 5;
+// 		}
+
+// 		&__photos-grid::after {
+// 			width: 72%;
+// 			bottom: 2%;
+// 		}
+
+// 		&__heading {
+// 			margin: 0 auto 28px;
+// 			width: 110px;
+// 		}
+// 	}
+// }
+
+
+// /*==================================== 400 ====================================*/
+
+// @media (max-width: 400px) {
+// 	/*------------------------------ eiger ------------------------------*/
+
+// 	.eiger {
+// 		&__heading {
+// 			text-align: center;
+// 		}
+
+// 		&__text {
+// 			text-align: center;
+// 		}
+
+// 		&__button {
+// 			margin: 0 auto;
+// 		}
+// 	}
+
+// 	/*------------------------------ men&womwn ------------------------------*/
+
+// 	.menandwomen {
+// 		&__inner {
+// 			padding: 30px 15px;
+// 		}
+// 	}
+
+// 	/*------------------------------ bestsellers ------------------------------*/
+
+// 	.bestsellers {
+// 		&__image {
+// 			background-position: right;
+// 		}
+
+// 		&__inner {
+// 			min-width: auto;
+// 		}
+
+// 		&__info {
+// 			max-width: 300px;
+// 		}
+// 	}
+// }
+
+
+// /*==================================== 340 ====================================*/
+
+// @media (max-width: 340px) {
+// 	/*------------------------------ header ------------------------------*/
+
+// 	.header {
+// 		&__nav {
+// 			margin: 0;
+// 			display: flex;
+// 			justify-content: space-around;
+// 		}
+
+// 		&__button {
+// 			text-align: center;
+// 			max-width: 200px;
+// 		}
+// 	}
+
+// 	/*------------------------------ items ------------------------------*/
+
+// 	.items {
+// 		&__heading {
+// 			max-width: 282px;
+// 		}
+// 	}
+
+// 	/*------------------------------ bestsellers ------------------------------*/
+
+// 	.bestsellers {
+// 		&__heading {
+// 			font-size: 40px;
+// 		}
+// 	}
+
+// 	/*------------------------------ shop ------------------------------*/
+
+
+// }
