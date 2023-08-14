@@ -97,7 +97,6 @@ html {
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.1254901961);
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
 }
@@ -121,6 +120,7 @@ html {
 .container {
   padding: 0 60px;
   width: 100%;
+  height: 100%;
 }
 
 .main-heading {
@@ -148,9 +148,9 @@ html {
 
 /*==================================== header ====================================*/
 .header {
-  background: url("../img/1.header/bg.jpg") no-repeat center top/cover;
+  background: url("../img/1.header/bg.jpg") no-repeat center/cover;
   color: #fff;
-  height: 100vh;
+  min-height: 100vh;
 }
 .header__inner {
   display: -webkit-box;
@@ -163,14 +163,15 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 90vh;
+  height: 100vh;
+  padding-top: 11px;
+  padding-bottom: 90px;
 }
 .header__content {
   padding: 0 32px;
 }
 .header a {
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .header a:hover {
@@ -179,7 +180,6 @@ html {
           transform: scale(1.1);
 }
 .header__mark {
-  padding-top: 11px;
   text-align: center;
   font-size: 10px;
   line-height: 13.2px;
@@ -202,7 +202,6 @@ html {
 .header__link {
   display: block;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
   color: #fff;
 }
@@ -224,7 +223,6 @@ html {
   border-radius: 4px;
   overflow: hidden;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .header__menu-popup--visible {
@@ -259,7 +257,6 @@ html {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .header__search-popup--visible {
@@ -282,7 +279,6 @@ html {
 .header__search-button {
   background: #fff;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .header__search-button img {
@@ -355,7 +351,6 @@ html {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
   overflow: hidden;
   -o-object-fit: cover;
@@ -366,7 +361,6 @@ html {
   width: 100%;
   height: 100%;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .items__item:hover img {
@@ -447,7 +441,6 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .menandwomen__item-image:hover img {
@@ -510,7 +503,6 @@ html {
 }
 .adventure__slide img {
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .adventure__slide img:hover {
@@ -557,7 +549,6 @@ html {
   width: 40px;
   height: 40px;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .adventure__slider-arrow:hover {
@@ -686,13 +677,11 @@ html {
       align-self: center;
   text-decoration: none;
   background: -webkit-gradient(linear, left top, right top, from(transparent), to(transparent)), -webkit-gradient(linear, left top, right top, from(rgb(0, 0, 0)), to(rgb(0, 0, 0)));
-  background: -o-linear-gradient(left, transparent, transparent), -o-linear-gradient(left, rgb(0, 0, 0), rgb(0, 0, 0));
   background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
   background-size: 100% 1px, 0 1px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   -webkit-transition: background-size 400ms;
-  -o-transition: background-size 400ms;
   transition: background-size 400ms;
 }
 .shop__link:hover {
@@ -752,7 +741,6 @@ html {
   -webkit-box-shadow: 1px 1px 3px -1px #000;
           box-shadow: 1px 1px 3px -1px #000;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .shop__slider-arrow:hover {
@@ -799,7 +787,6 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .blog__photos-item img:hover {
@@ -838,7 +825,6 @@ html {
   margin: 0 auto;
   position: relative;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .blog__button-link::before {
@@ -898,7 +884,6 @@ html {
           box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .subscribe__button-link:hover {
@@ -972,7 +957,6 @@ html {
   line-height: 16px;
   letter-spacing: 0.864px;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
   pointer-events: none;
 }
@@ -987,7 +971,6 @@ html {
   line-height: 16px;
   letter-spacing: 0.864px;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .footer__menu-link:hover {
@@ -1045,7 +1028,6 @@ html {
 }
 .footer__middle-image--path svg path {
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .footer__middle-image--path:hover svg path {
@@ -1053,7 +1035,6 @@ html {
 }
 .footer__middle-image--stroke svg path {
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .footer__middle-image--stroke:hover svg path {
@@ -1118,7 +1099,6 @@ html {
   line-height: 21px;
   letter-spacing: 0.84px;
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .footer__bottom-link:hover {
@@ -1153,7 +1133,6 @@ html {
 }
 .footer__bottom-socials-icon svg path {
   -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .footer__bottom-socials-icon:hover svg path {
@@ -1267,7 +1246,6 @@ html {
   .adventure__slider-dots .slick-active button::before {
     background-color: #424551;
     -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s;
   }
   /*------------------------------ bestsellers ------------------------------*/
@@ -1754,7 +1732,6 @@ html {
   .shop__slider-dots .slick-active button::before {
     background-color: #424551;
     -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s;
   }
   /*------------------------------ footer ------------------------------*/
