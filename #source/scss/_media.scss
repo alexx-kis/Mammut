@@ -38,7 +38,7 @@
 @media (max-width: 850px) {
 	/*------------------------------ header ------------------------------*/
 
-	.header {
+	.hero {
 		background-position: 0 0;
 	}
 }
@@ -452,7 +452,6 @@
 	/*------------------------------ header ------------------------------*/
 
 	.header {
-		background: url('../img/1.header/bg-left.jpg') no-repeat center / cover;
 
 		&__content {
 			display: flex;
@@ -480,6 +479,10 @@
 		&__button::after {
 			display: none;
 		}
+	}
+
+	.hero {
+		background: url('../img/0.hero/bg-left.jpg') no-repeat center / cover;
 	}
 
 	/*------------------------------ eiger ------------------------------*/
